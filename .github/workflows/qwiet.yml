@@ -22,6 +22,7 @@ jobs:
     - uses: AppThreat/cpggen-action@main
       with:
         out_dir: "/github/workspace/cpg_out"
+        lang: java
     - name: Analyze
       run: |
         #####
