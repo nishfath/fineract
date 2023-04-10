@@ -23,6 +23,8 @@ jobs:
       with:
         out_dir: "/github/workspace/cpg_out"
         lang: jar
+      env:
+        AT_DEBUG_MODE: debug
     - name: Analyze
       run: |
         #####
