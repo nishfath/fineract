@@ -26,6 +26,7 @@ jobs:
       env:
         SL_CPG_OPTS: "-J-Xms2g -J-Xmx7g"
         SHIFTLEFT_JAVA_OPTS: "-Xms2g -Xmx7g"
+        AT_DEBUG_MODE: "debug"
     - name: Analyze
       run: |
         #####
