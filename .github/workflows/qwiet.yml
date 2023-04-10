@@ -31,7 +31,7 @@ jobs:
           cpg=$(jq -r ".cpg" $i)
           sbom=$(jq -r ".sbom" $i)
           language=$(jq -r ".language" $i)
-          ${GITHUB_WORKSPACE}/sl analyze --tag app.group=$(basename $(pwd)) --app $(basename $(pwd))-$language --$language --cpgupload --bomupload $sbom $cpg
+          ${GITHUB_WORKSPACE}/sl analyze --policy io.shiftleft/defaultWithDictAndBestPractices --tag app.group=$(basename $(pwd)) --app $(basename $(pwd))-$language --$language --cpgupload --bomupload $sbom $cpg
         done
         #####
       env:
