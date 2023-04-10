@@ -23,9 +23,10 @@ jobs:
       with:
         src: "/github/workspace/fineract-provider"
         out_dir: "/github/workspace/cpg_out"
-        lang: java
+        lang: jar
       env:
-        AT_DEBUG_MODE: debug
+        SL_CPG_OPTS: "-J-Xms2g -J-Xmx7g"
+        SHIFTLEFT_JAVA_OPTS: "-Xms2g -Xmx7g"
     - name: Analyze
       run: |
         #####
